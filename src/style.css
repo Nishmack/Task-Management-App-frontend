@@ -1,0 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9; /* Light background color */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+
+.container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+.container h2{
+    text-align: center;
+    color: #106EBE;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+
+.table {
+  margin-bottom: 0;
+}
+
+.table th {
+  background-color: #106EBE !important; 
+  color: #fff !important;
+  text-transform: uppercase;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+
+svg {
+  color: #106EBE;
+  transition: color 0.3s, transform 0.3s;
+}
+
+svg:hover {
+  color: #0056b3; 
+  transform: scale(1.1);
+}
+
+
+button {
+  background-color: #106EBE;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #106EBE;
+}
+
+/* Modal Styling */
+.modal-content {
+  border-radius: 15px;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-header, .modal-footer {
+  border: none;
+}
+
+.modal-title {
+  font-weight: bold;
+}
+
+
+form {
+  margin: 10px 0;
+}
+
+form input, form select {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+form input:focus, form select:focus {
+  border-color: #106EBE;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+.savebtn{
+    background-color: #106EBE !important;
+}
+.update-btn{
+    background-color: #106EBE !important;
+}
+
+/* Keyframes Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Add Animation to Header */
+h2 {
+  animation: fadeIn 0.7s ease-in-out;
+  color: #106EBE
+}
+
+h4 {
+  animation: pulse 1.5s infinite ease-in-out;
+  color: #333;
+}
+
+/* Tooltip Styling */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; 
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

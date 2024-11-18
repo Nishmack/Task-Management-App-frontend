@@ -4,6 +4,7 @@ import { MdDelete } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
 import { IoIosAddCircle } from 'react-icons/io';
 import axios from 'axios';
+import "../style.css";
 
 function TaskManager() {
   const backendUrl = process.env.REACT_APP_BACKEND_URL; // Add your backend URL in .env
@@ -75,7 +76,7 @@ function TaskManager() {
     }
   };
 
-  // Open Edit Modal with selected task details
+  // Open Edit Modal
   const openEditModal = (task) => {
     setTaskId(task._id);
     setTaskDescription(task.description);
@@ -150,7 +151,7 @@ function TaskManager() {
           <Button variant="secondary" onClick={handleCloseAddModal}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleAddTask}>
+          <Button className='savebtn' onClick={handleAddTask}>
             Save
           </Button>
         </Modal.Footer>
@@ -173,7 +174,7 @@ function TaskManager() {
           <Button variant="secondary" onClick={handleCloseEditModal}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleEditTask}>
+          <Button className='update-btn' onClick={handleEditTask}>
             Update
           </Button>
         </Modal.Footer>
